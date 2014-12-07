@@ -56,6 +56,11 @@ bool MainMenu::init()
 	menu->setTouchPriority(-201);
 	this->addChild(menu);
 
+	CCLabelTTF *powerBy = CCLabelTTF::create("Power by cocos2d-x", FONT_NAME, 50);
+	powerBy->setAnchorPoint(ccp(1, 0));
+	powerBy->setPosition(ccp(SCREEN_WIDTH, 0));
+	this->addChild(powerBy);
+
 	this->setTouchPriority(-200);
 	this->setTouchMode(kCCTouchesOneByOne);
 	this->setTouchEnabled(true);
