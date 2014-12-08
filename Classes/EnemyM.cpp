@@ -36,6 +36,7 @@ void EnemyM::initEnemy()
 	{
 		createNewEnemy(0);
 	}
+	this->unschedule(schedule_selector(EnemyM::createNewEnemy));
 	this->schedule(schedule_selector(EnemyM::createNewEnemy),60);
 }
 

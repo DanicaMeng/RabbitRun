@@ -49,6 +49,7 @@ void ItemM::createNewItemeEveryTime(float dt)
 
 void ItemM::initItem()
 {
+	this->unschedule(schedule_selector(ItemM::createNewItemeEveryTime));
 	this->schedule(schedule_selector(ItemM::createNewItemeEveryTime),2);
 }
 

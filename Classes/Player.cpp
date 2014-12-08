@@ -152,6 +152,7 @@ void Player::eatItem(ITEM_TYPE type)
 		soundFile = "rabbit_eat_small_carrot.wav";
 		_sterlth = true;
 		_sprite->setOpacity(150);
+		this->unschedule(schedule_selector(Player::unsterlth));
 		this->scheduleOnce(schedule_selector(Player::unsterlth), STEALTH_TIME);
 		break;
 	case ICE_CARROT:
